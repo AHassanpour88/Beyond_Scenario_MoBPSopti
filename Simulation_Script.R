@@ -1,3 +1,7 @@
+# for NUM in {1..700}; do
+# sbatch -p medium -t 1:0:0 -n 4 -o logfile_${NUM}.log -N 1 --mem=15G --wrap="source ~/.bashrc; conda activate;  Rscript --vanilla Simulation_Script.R ${NUM}"; 
+# done
+
 args <- commandArgs(TRUE)
 run <- as.numeric(args[1])
 
