@@ -1,11 +1,11 @@
 ############## local variance using Kernel regression ###############
 
-load("first_iteration.RData")
+load("data/first_iteration.RData")
 
 approx_f <- function(x1, x2, x3, sd1=30, sd2 = 10){
   dist <- sqrt((results[,2] - x3)^2+ (results[,3] - x1)^2 + (30*(results[,4] -x2))^2 )
-  weigth <- dnorm(dist, sd=sd1)  # reduce it by half at each round
-  weigth2 <- dnorm(dist, sd=sd2) # reduce it by half at each round
+  weigth <- dnorm(dist, sd=sd1)  
+  weigth2 <- dnorm(dist, sd=sd2)
   gain <- sum(results[,5] * weigth / sum(weigth))
   kin <- sum(results[,6] * weigth2 / sum(weigth2))
   return (c(gain, kin)) } # higher weight on inbreeding rate
@@ -13,8 +13,8 @@ approx_f <- function(x1, x2, x3, sd1=30, sd2 = 10){
 
 approx_var <- function(x1, x2, x3, sd1=30, sd2 = 10){
   dist <- sqrt((results[,2] - x3)^2+ (results[,3] - x1)^2 + (30*(results[,4] -x2))^2 )
-  weigth <- dnorm(dist, sd=sd1)  # reduce it by half at each round
-  weigth2 <- dnorm(dist, sd=sd2) # reduce it by half at each round
+  weigth <- dnorm(dist, sd=sd1)  
+  weigth2 <- dnorm(dist, sd=sd2) 
   exp = approx_f(x1, x2, x3, sd1=sd1, sd2 = sd2)
   gain <- sum((results[,5]^2 - exp[1]^2) * weigth / sum(weigth))
   kin <- sum((results[,6]^2 - exp[2]^2) * weigth2 / sum(weigth2))
