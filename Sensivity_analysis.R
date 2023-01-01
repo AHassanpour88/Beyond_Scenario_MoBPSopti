@@ -43,7 +43,7 @@ sim_n <- function(data, sample_size, rep) {
         map( function(y) {
           
           # sampling from initial 60000 simulations depends on the sample size
-          data[sample(nrow(data), size = size, replace=FALSE),] 
+          data[sample(nrow(data), size = size, replace=TRUE),] 
           
         }) 
       
@@ -114,10 +114,11 @@ allsim <- 1:length(mysim) %>%
 
 genetic_gain <- sensivity_analysis(data = results
                   , rep = 50
-                  , sample_size = c(1000, 5000, 10000,20000,40000,60000)
+                  , sample_size = c(1000, 5000, 10000,
+                                    20000, 40000, 60000)
                   )
 
-save(genetic_gain, file = "genetic_gain_50rep_without_replacement.Rdata")
+save(genetic_gain, file = "genetic_gain.Rdata")
 
 
 }
