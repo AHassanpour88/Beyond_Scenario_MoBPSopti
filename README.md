@@ -14,14 +14,11 @@ This repository contains scripts for resource optimization in breeding program u
 ## 1 Description of the underlying simulation case
 We will propose a general pipeline for optimizing breeding programs in the following. We will provide an exemplary breeding scenario of a simplified classical dairy cattle breeding scheme. In dairy cattle breeding program, the performance traits of a bull cannot be determined phenotypically and can be expressed only by cows, so pre-selected bulls must be mated to cows to produce test daughters. The offspring performance of the test bulls will be used as criteria for selection decisions, and selected sires and cows with the desired trait will then be used as parents for the next cycle. In our example, a genomic breeding value estimation was used to select bulls, whereas cows were selected based on pedigree breeding value estimation. With the two older generations of cows having phenotypic information available, the last three generations have been considered for selection. Using 1,000 purely additive QTLs, a mean genomic value of 100, and a genomic standard deviation of 10, we simulated a single trait with a heritability of 0.3. [Simulation_Script](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#1-Simulation_Script)
 
-$$
-\begin{aligned}
-4000x_1 + 3000x_2 - 10000000 &\leq 0\\
-x_1 + x_2 + x_3 &\geq 0\\
-100 &\leq x_2 \leq 700\\
-3 &\leq x_3 \leq 30
-\end{aligned}
-$$
+
+$4000x_1 + 3000x_2 - 10000000 &\leq 0\\$
+$x_1 + x_2 + x_3 &\geq 0\\$
+$100 &\leq x_2 \leq 700\\$
+$3 &\leq x_3 \leq 30$
 
 
 ## 2 Nadaraya-Watson kernel function estimator
