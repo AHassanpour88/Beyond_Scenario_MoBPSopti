@@ -1,5 +1,4 @@
 # title: "Beyond Scenarios - Resource optimization for dairy cattle breeding programs (MoBPSopti)"
-# author: "Azadeh Hassanpour"
 
 ### This command was used on server cluster to perform the simulation script ###
 # for NUM in {1..1}; do
