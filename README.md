@@ -21,3 +21,5 @@ Once the simulation is complete, and we have our statistic used for the objectiv
 
 
 ## 4 
+
+[@Nadaraya1964] Nadaraya EA. 1964. On estimating regression. Theory of Probability & Its Applications. 9:141–142.
