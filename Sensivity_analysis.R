@@ -118,7 +118,7 @@ genetic_gain <- sensivity_analysis(data = results
                                     20000, 40000, 60000)
                   )
 
-save(genetic_gain, file = "genetic_gain.Rdata")
+save(genetic_gain, file = "genetic_gain_list_samples.Rdata")
 
 
 }
