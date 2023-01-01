@@ -16,9 +16,9 @@ We will propose a general pipeline for optimizing breeding programs in the follo
 
 $$
 \begin{aligned}
-4000x_1 + 3000x_2 - 10000000 &\leq 0\
-x_1 + x_2 + x_3 &\geq 0\
-100 &\leq x_2 \leq 700\
+4000x_1 + 3000x_2 - 10000000 &\leq 0\\
+x_1 + x_2 + x_3 &\geq 0\\
+100 &\leq x_2 \leq 700\\
 3 &\leq x_3 \leq 30
 \end{aligned}
 $$
