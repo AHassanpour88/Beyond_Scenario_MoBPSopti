@@ -3,7 +3,7 @@
 results_full <- NULL
 
 #first iteration results
-load("first_iteration.RData")
+load("data/first_iteration.RData")
 
 set.seed(2091367)
 
@@ -83,7 +83,7 @@ results_full <- NULL
 
 levels = seq(106, 108.3, length.out=20)
 
-load("first_iteration.RData")
+load("data/first_iteration.RData")
 
 approx_f <- function(x1, x2, x3, bw=1){
   dist <- sqrt((results[,2] - x3)^2+ (results[,3] - x1)^2 + (30*(results[,4] -x2))^2 )
@@ -136,7 +136,7 @@ a = filled.contour(fld,
 bx = c(120, 260)
 by = c(10,20)
 
-load("second_iteration.RData")
+load("data/second_iteration.RData")
 
 results = rbind(results, LOAD_NEW)
 bw =0.5
@@ -175,7 +175,7 @@ a = filled.contour(fld,
 bx = c(150, 200)
 by = c(10,15)
 
-load("third_iteration.RData")
+load("data/third_iteration.RData")
 
 results = rbind(results, third_sim)
 bw =0.25
