@@ -15,7 +15,7 @@ library(tidyverse)
 
 for(setting in 1:1){
 
-load("results_full.RData")
+load("first_iteration.RData")
 
 # sensitivity -------------------------------------------------------------
 
