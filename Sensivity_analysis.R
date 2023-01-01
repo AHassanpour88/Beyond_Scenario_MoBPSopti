@@ -1,6 +1,6 @@
 # title: "Beyond Scenarios - Resource optimization for dairy cattle breeding programs (MoBPSopti)"
 
-### This command was used on server cluster to perform the simulation script ###
+### This command was used on server cluster to etimate the number of needed simulations for optimization ###
 # for NUM in {1..1}; do
 # sbatch -p medium -t 48:0:0 -n 4 -o logfile_${NUM}.log -N 1 --mem=20G --wrap="source ~/.bashrc; conda activate mobpsopti;  Rscript --vanilla Sensivity_analysis.R ${NUM}"; 
 # done
