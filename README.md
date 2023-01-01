@@ -3,6 +3,6 @@
 ## Table of contents
 [0 Introduction](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#0-introduction) <br />
 [1 Description of the underlying simulation case](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#1-Simulation_Script) <br />
-[2 Optimization problem and objective function] <br />
-[3 Filtering](https://github.com/MilaTost/ExpEvo_with_replicated_selection/blob/main/README.md#3-filtering) <br />
-&emsp;[3.1 Nadaraya-Watson kernel function estimator]
+[2 Nadaraya-Watson kernel function estimator](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#2-Visualization_Script) <br />
+[4 Estimation of the number of needed simulations](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#4-Kernel_for_local_variance) <br />
+[3 Estimation of the number of needed simulations](https://github.com/AHassanpour88/Beyond_Scenario_MoBPSopti/edit/main/README.md#3-Sensivitiy_Script) <br />
