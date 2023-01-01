@@ -1,14 +1,7 @@
 library(data.table)
 library(ggplot2)
 
-results <- results_full
-results_full <- list()
-for(index in 1:700){
-  load(paste0("D:/MoBPS/WCGALP/final/first/results_",index,".RData")) #10,15 -121,219
-  results_full[[index]] <- results
-}
-results <- do.call(rbind,results_full)
-
+  load(paste0("data/firs_iteration.RData")) #10,15 -121,219
 
 n_window <- 10 # number of windows
 share_window <- 5*2 # relative size of window --> 5*2 --> 1/5 of range
