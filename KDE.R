@@ -46,6 +46,7 @@ gain_60000 <- genetic_gain_list_samples %>% filter(Nr.Sim == "60000")
 
 
 # Calculate the density using kde2d
+# well-supported rule-of-thumb for choosing the bandwidth of a Gaussian kernel density estimator.
 col_palette <- hcl.colors(5, "YlOrRd", rev = TRUE)
 a <- kde2d(gain_60000$bull, gain_60000$sel, n=200)
 image(a, breaks = seq(0, max(a$z), length.out=11), plot.title = {par(cex.main=2,
