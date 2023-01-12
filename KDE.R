@@ -44,20 +44,36 @@ gain_40000 <- genetic_gain_list_samples %>% filter(Nr.Sim == "40000")
 gain_60000 <- genetic_gain_list_samples %>% filter(Nr.Sim == "60000")
 
 
+par(mar = c(5, 5, 5, 7))
 
 # Calculate the density using kde2d
-# well-supported rule-of-thumb for choosing the bandwidth of a Gaussian kernel density estimator.
-col_palette <- hcl.colors(5, "YlOrRd", rev = TRUE)
-a <- kde2d(gain_60000$bull, gain_60000$sel, n=200)
-image(a, breaks = seq(0, max(a$z), length.out=11), plot.title = {par(cex.main=2,
-                                                                     adj=0.5,
-                                                                     cex.lab=3,
-                                                                     cex.axis =2)},
-      col = hcl.colors(10, "YlOrRd", rev = TRUE))
+col_palette <- hcl.colors(6, "YlOrRd", rev = TRUE)
 
-my_seq <- (seq(0, max(a$z), length.out=5))
+a <- kde2d(gain_1000$bull, gain_1000$sel, n=500, h = c(30,1))
+image(a, breaks = seq(0, max(a$z), length.out=7), 
+      plot.title = {par(cex.main=2,
+                        adj=0.5,
+                        cex.lab=3,
+                        cex.axis =2)},
+      xlim = c(100, 380), ylim = c(6, 20),
+      col = col_palette)
 
-legend("topleft", fill = col_palette,
-       legend = format(my_seq, digits = 1),
+
+
+
+
+levels = seq(0, 0.10, length.out=6)
+
+legend("topright", fill = col_palette,
+       # legend = format(my_seq, digits = 1),
+       legend = levels,
        cex = 1.5,
-       title = "Density")
+       title = "Density",
+       inset = c(-0.142, 0),
+       xpd = TRUE)
+
+### bandwidth can be also estimates using rule of thumb
+variable <- results[,4]
+r <- quantile(variable, c(0.25, 0.75))
+h <- (r[2] - r[1])/1.34
+4 * 1.06 * min(sqrt(var(variable)), h) * length(variable)^(-1/5)
